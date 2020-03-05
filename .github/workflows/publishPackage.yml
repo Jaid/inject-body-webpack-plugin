@@ -1,0 +1,29 @@
+name: Publish Node package
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/checkout
+        uses: actions/checkout@v1.2.0
+      - name: actions/setup-node
+        uses: actions/setup-node@v1.3.0
+        with:
+          node-version: "12.13.1"
+      - name: npm install
+        uses: jaid/action-npm-install@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Jest
+        uses: jaid/action-jest@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish
+        uses: jaid/action-publish@master
+        with:
+          githubToken: ${{ secrets.packagesToken }}
+          npmPrepareScript: build:prod
+          publishDirectory: dist/package/production
+          npmToken: ${{ secrets.npmToken }}
