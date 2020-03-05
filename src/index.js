@@ -1,12 +1,13 @@
 /** @module inject-body-webpack-plugin */
 
+import insertStringAfter from "insert-string-after"
 import insertStringBefore from "insert-string-before"
-
-import injectionTemplate from "./injection.hbs"
 
 /**
  * @typedef {Object} Options
  * @prop {number} [port = 3000]
+ * @prop {string} content
+ * @prop {string} position
  */
 
 /**
@@ -21,6 +22,8 @@ export default class InjectBrowserSyncPlugin {
   constructor(options) {
     this.options = {
       port: 3000,
+      content: "<div id=\"root\"></div>",
+      position: "start",
       ...options,
     }
   }
@@ -29,12 +32,13 @@ export default class InjectBrowserSyncPlugin {
    * @param {import("webpack").Compiler} compiler
    */
   apply(compiler) {
-    const injection = injectionTemplate({
-      options: this.options,
-    })
     compiler.hooks.compilation.tap(_PKG_NAME, compilation => {
       compilation.hooks.htmlWebpackPluginAfterHtmlProcessing.tapAsync(_PKG_NAME, (data, cb) => {
-        data.html = insertStringBefore(data.html, "</body>", injection)
+        if (this.options.position === "end") {
+          data.html = insertStringBefore(data.html, "</body>", this.options.content)
+        } else {
+          data.html = insertStringAfter(data.html, "<body>", this.options.content)
+        }
         cb(null, data)
       })
     })

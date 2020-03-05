@@ -6,6 +6,7 @@
     "@babel/runtime": "^7.8.7",
     "debug": "^4.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "insert-string-after": "^1.0.0",
     "insert-string-before": "^1.0.0"
   },
   "devDependencies": {
