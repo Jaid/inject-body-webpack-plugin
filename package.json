@@ -1,6 +1,6 @@
 {
   "webpackConfigJaid": "nodeClass",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@babel/runtime": "^7.8.7",
