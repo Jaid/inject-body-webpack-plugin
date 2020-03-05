@@ -1,1 +1,45 @@
-{"webpackConfigJaid":"nodeClass","version":"0.1.0","author":"Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)","dependencies":{"@babel/runtime":"^7.8.7","debug":"^4.1.1","html-webpack-plugin":"^3.2.0","insert-string-before":"^1.0.0"},"devDependencies":{"acorn":"^7.1.1","babel-jest":"^25.1.0","babel-preset-jaid":"^7.3.3","browserslist-config-jaid-node":"^2.2.2","clean-webpack-plugin":"^3.0.0","eslint":"^6.8.0","eslint-config-jaid":"^1.47.0","jest":"^25.1.0","load-json-file":"^6.2.0","pify":"^5.0.0","rimraf":"^3.0.2","webpack":"^4.42.0","webpack-config-jaid":"^11.6.0"},"scripts":{"clean":"rimraf dist/","babel:prod":"rimraf dist/transpiled/production && NODE_ENV=production babel --out-dir dist/transpiled/production --source-maps true src","babel:dev":"rimraf dist/transpiled/development && NODE_ENV=development babel --out-dir dist/transpiled/development src","babel:test":"rimraf dist/transpiled/test && NODE_ENV=test babel --out-dir dist/transpiled/test src","build:prod":"NODE_ENV=production webpack","build:dev":"NODE_ENV=development webpack","test":"npm run build:prod && NODE_ENV=production MAIN=dist/package/production jest --runInBand --detectOpenHandles","test:coverage":"npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json","test:debug":"DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand","prepareActionJest":"npm run build:prod"},"name":"inject-body-webpack-plugin","description":"Webpack plugin that injects a custom string into the body of the html-webpack-plugin output.","funding":"https://github.com/sponsors/jaid","repository":{"type":"git","url":"https://github.com/jaid/inject-body-webpack-plugin"}}
+{
+  "webpackConfigJaid": "nodeClass",
+  "version": "0.1.0",
+  "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
+  "dependencies": {
+    "@babel/runtime": "^7.8.7",
+    "debug": "^4.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "insert-string-before": "^1.0.0"
+  },
+  "devDependencies": {
+    "acorn": "^7.1.1",
+    "babel-jest": "^25.1.0",
+    "babel-preset-jaid": "^7.3.3",
+    "browserslist-config-jaid-node": "^2.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-jaid": "^1.47.0",
+    "jest": "^25.1.0",
+    "load-json-file": "^6.2.0",
+    "pify": "^5.0.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.42.0",
+    "webpack-config-jaid": "^11.6.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "babel:prod": "rimraf dist/transpiled/production && NODE_ENV=production babel --out-dir dist/transpiled/production --source-maps true src",
+    "babel:dev": "rimraf dist/transpiled/development && NODE_ENV=development babel --out-dir dist/transpiled/development src",
+    "babel:test": "rimraf dist/transpiled/test && NODE_ENV=test babel --out-dir dist/transpiled/test src",
+    "build:prod": "NODE_ENV=production webpack",
+    "build:dev": "NODE_ENV=development webpack",
+    "test": "npm run build:prod && NODE_ENV=production MAIN=dist/package/production jest --runInBand --detectOpenHandles",
+    "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
+    "test:debug": "DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
+    "prepareActionJest": "npm run build:prod"
+  },
+  "name": "inject-body-webpack-plugin",
+  "description": "Webpack plugin that injects a custom string into the body of the html-webpack-plugin output.",
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/inject-body-webpack-plugin"
+  }
+}
