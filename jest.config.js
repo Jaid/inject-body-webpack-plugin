@@ -13,6 +13,10 @@ module.exports = {
     "<rootDir>/node_modules/",
     "<rootDir>/dist/",
   ],
+  modulePathIgnorePatterns: [
+    "<rootDir>/dist",
+    "<rootDir>/build",
+  ],
   moduleNameMapper: {
     "^root": "<rootDir>",
     "^src": "<rootDir>/src",
