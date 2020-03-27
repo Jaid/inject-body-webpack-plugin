@@ -47,7 +47,6 @@ npm install --save-dev @jaid/inject-body-webpack-plugin@^1.0.0
 
 
 
-
 ## Development
 
 
@@ -66,4 +65,4 @@ npm run test
 
 ## License
 [MIT License](https://raw.githubusercontent.com/jaid/inject-body-webpack-plugin/master/license.txt)  
-Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
