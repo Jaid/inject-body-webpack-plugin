@@ -2,11 +2,14 @@
   "compilerOptions": {
     "allowJs": true,
     "checkJs": true,
-    "esModuleInterop": true,
     "baseUrl": ".",
     "outDir": "dist/typescript",
+    "newLine": "lf",
     "declaration": true,
     "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "paths": {
       "lib/*": [
         "src/lib/*"
