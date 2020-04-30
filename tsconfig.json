@@ -1,35 +1,7 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true,
-    "baseUrl": ".",
-    "outDir": "dist/typescript",
-    "newLine": "lf",
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "resolveJsonModule": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "paths": {
-      "lib/*": [
-        "src/lib/*"
-      ],
-      "src/*": [
-        "src/*"
-      ],
-      "root/*": [
-        "./*"
-      ]
-    }
-  },
+  "extends": "./tsconfigBase.json",
   "include": [
-    "src/**/*.js"
+    "src/**/*.js",
+    "src/**/*.ts",
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "typeAcquisition": {
-    "enable": true
-  }
 }
