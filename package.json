@@ -43,5 +43,17 @@
     "url": "https://github.com/jaid/inject-body-webpack-plugin"
   },
   "homepage": "https://github.com/Jaid/inject-body-webpack-plugin",
-  "keywords": []
+  "keywords": [
+    "add-on",
+    "addon",
+    "html",
+    "html-webpack-plugin",
+    "html-webpack-plugin-plugin",
+    "library",
+    "node",
+    "node-js",
+    "plugin",
+    "webpack",
+    "webpack-plugin"
+  ]
 }
