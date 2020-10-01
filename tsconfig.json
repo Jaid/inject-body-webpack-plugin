@@ -6,5 +6,8 @@
   ],
   "typeAcquisition": {
     "enable": true
+  },
+  "compilerOptions": {
+    "baseUrl": "."
   }
 }
