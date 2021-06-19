@@ -1,0 +1,8 @@
+content:
+  default: '&lt;div id=root>&lt;/div>'
+  type: string
+  info: The text that will be inject into the final HTML output.
+position:
+  default: start
+  type: string
+  info: If “start”, the content will be injected as close to the body opening tag as possible. If “end”, the content will be injected as close to the body ending tag as possible.

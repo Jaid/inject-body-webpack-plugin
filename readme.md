@@ -61,6 +61,30 @@ index.html
 
 
 
+## Options
+
+
+
+<table>
+<tr>
+<th></th>
+<th>Type</th>
+<th>Default</th>
+<th>Info</th>
+</tr>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>&lt;div id=root>&lt;/div></td>
+<td>The text that will be inject into the final HTML output.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>string</td>
+<td>start</td>
+<td>If “start”, the content will be injected as close to the body opening tag as possible. If “end”, the content will be injected as close to the body ending tag as possible.</td>
+</tr>
+</table>
 
 
 
