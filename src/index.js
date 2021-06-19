@@ -15,7 +15,7 @@ import debug from "lib/debug"
 /**
  * @class
  */
-export default class InjectBrowserSyncPlugin {
+export default class InjectBodyPlugin {
 
   /**
    * @constructor
