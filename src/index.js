@@ -6,7 +6,6 @@ import insertStringBefore from "insert-string-before"
 
 /**
  * @typedef {Object} Options
- * @prop {number} [port = 3000]
  * @prop {string} content
  * @prop {string} position
  */
@@ -22,7 +21,6 @@ export default class InjectBrowserSyncPlugin {
    */
   constructor(options) {
     this.options = {
-      port: 3000,
       content: "<div id=\"root\"></div>",
       position: "start",
       ...options,
