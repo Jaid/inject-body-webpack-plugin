@@ -4,7 +4,7 @@ import path from "path"
 import pify from "pify"
 import webpack from "webpack"
 
-const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
+const indexModule = require(process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src"))
 const {default: Plugin} = indexModule
 
 it("should run", async () => {
