@@ -1,7 +1,7 @@
 content:
   default: '&lt;div id=root/>'
   type: string
-  info: The text that will be inject into the final HTML output.
+  info: The text that will be injected into the final HTML output.
 position:
   default: start
   type: string
