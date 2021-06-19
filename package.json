@@ -2,9 +2,11 @@
   "webpackConfigJaid": "nodeClass",
   "version": "1.1.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
+  "peerDependencies": {
+    "html-webpack-plugin": "^5.3.1"
+  },
   "dependencies": {
     "debug": "^4.3.1",
-    "html-webpack-plugin": "^5.3.1",
     "insert-string-after": "^1.0.0",
     "insert-string-before": "^1.0.0"
   },
