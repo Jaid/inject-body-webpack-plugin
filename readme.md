@@ -76,7 +76,7 @@ index.html
 <td>content</td>
 <td>string</td>
 <td>&lt;div id=root/></td>
-<td>The text that will be inject into the final HTML output.</td>
+<td>The text that will be injected into the final HTML output.</td>
 </tr>
 <tr>
 <td>position</td>
