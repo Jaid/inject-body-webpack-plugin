@@ -44,7 +44,7 @@ export default class InjectBrowserSyncPlugin {
         } else {
           data.html = insertStringAfter(data.html, "<body>", this.options.content)
         }
-        debug(" After: %s", data.html)
+        debug("After: %s", data.html)
         callback(null, data)
       })
     })
