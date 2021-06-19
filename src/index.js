@@ -33,8 +33,8 @@ export default class InjectBrowserSyncPlugin {
    * @param {import("webpack").Compiler} compiler
    */
   apply(compiler) {
-    compiler.hooks.compilation.tap(_PKG_NAME, compilation => {
-      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(_PKG_NAME, (data, cb) => {
+    compiler.hooks.compilation.tap(process.env.REPLACE_PKG_NAME, compilation => {
+      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(process.env.REPLACE_PKG_NAME, (data, cb) => {
         if (this.options.position === "end") {
           data.html = insertStringBefore(data.html, "</body>", this.options.content)
         } else {
