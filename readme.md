@@ -25,12 +25,12 @@ npm install --save-dev inject-body-webpack-plugin@^1.1.0
 yarn add --dev inject-body-webpack-plugin@^1.1.0
 ```
 
-<a href="https://github.com/jaid/inject-body-webpack-plugin/packages"><img src="https://img.shields.io/badge/GitHub Packages-@jaid/inject--body--webpack--plugin-24282e?style=flat-square&logo=github" alt="@jaid/inject-body-webpack-plugin on GitHub Packages"/></a>  
-(if [configured properly](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages))
 
-```bash
-npm install --save-dev @jaid/inject-body-webpack-plugin@^1.1.0
-```
+
+
+
+
+
 
 
 
@@ -49,6 +49,9 @@ npm install --save-dev @jaid/inject-body-webpack-plugin@^1.1.0
 
 ## Development
 
+<details>
+<summary><b>Development hints for maintaining and improving inject-body-webpack-plugin</b></summary>
+
 
 
 Setting up:
@@ -62,7 +65,13 @@ Testing in production environment:
 npm run test
 ```
 
+</details>
 
 ## License
 [MIT License](https://raw.githubusercontent.com/jaid/inject-body-webpack-plugin/master/license.txt)  
-Copyright © 2020, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
+Copyright © 2021, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
+
+<!---
+Readme generated with tldw v7.1.0
+https://github.com/Jaid/tldw
+-->
