@@ -18,8 +18,12 @@ module.exports = TestPlugin => {
     },
     plugins: [
       new CleanWebpackPlugin,
-      new HtmlWebpackPlugin,
-      new TestPlugin,
+      new HtmlWebpackPlugin({
+        templateContent: "<html><body></body></html>",
+      }),
+      new TestPlugin({
+        content: "<main/>",
+      }),
     ],
   }
 }

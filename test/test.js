@@ -16,6 +16,5 @@ it("should run", async () => {
   expect(exists).toBeTruthy()
   const htmlOutputFile = path.resolve(outputFile, "..", "index.html")
   const output = await fsp.readFile(htmlOutputFile, "utf8")
-  const expectedContent = await fsp.readFile(path.join(__dirname, "expected.txt"), "utf8")
-  expect(output).toMatch(expectedContent)
+  expect(output).toMatch(/<body><main\/><\/body><\/html>$/)
 }, ms`1 minute`)

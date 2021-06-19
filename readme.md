@@ -27,6 +27,9 @@ yarn add --dev inject-body-webpack-plugin@^1.2.0
 
 
 
+## Example
+
+a
 
 
 
