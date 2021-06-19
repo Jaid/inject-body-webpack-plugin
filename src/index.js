@@ -17,17 +17,17 @@ import debug from "lib/debug"
  */
 export default class InjectBrowserSyncPlugin {
 
-  // /**
-  //  * @constructor
-  //  * @param {Options} [options] Plugin options
-  //  */
-  // constructor(options) {
-  //   this.options = {
-  //     content: "<div id=\"root\"></div>",
-  //     position: "start",
-  //     ...options,
-  //   }
-  // }
+  /**
+   * @constructor
+   * @param {Options} [options] Plugin options
+   */
+  constructor(options) {
+    this.options = {
+      content: "<div id=\"root\"></div>",
+      position: "start",
+      ...options,
+    }
+  }
 
   /**
    * @param {import("webpack").Compiler} compiler
