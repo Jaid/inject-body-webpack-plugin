@@ -42,7 +42,7 @@ export default {
       templateContent: "<html><body></body></html>"
     }),
     new InjectBodyPlugin({
-      content: '<main id="root">Hi!</main>'
+      content: '<main id=root>Hi!</main>'
     }),
   ],
 }
@@ -52,7 +52,7 @@ export default {
 
 index.html
 ```html
-<html><body><main id="root">Hi!</main></body></html>
+<html><body><main id=root>Hi!</main></body></html>
 ```
 
 
