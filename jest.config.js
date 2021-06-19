@@ -22,4 +22,7 @@ module.exports = {
     "^src": "<rootDir>/src",
     "^lib": "<rootDir>/src/lib",
   },
+  // This is only false by default if there are multiple test files, so we have to force this to be false
+  // https://jestjs.io/docs/configuration#verbose-boolean
+  verbose: false,
 }
