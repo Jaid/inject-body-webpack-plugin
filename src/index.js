@@ -4,6 +4,8 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 import insertStringAfter from "insert-string-after"
 import insertStringBefore from "insert-string-before"
 
+import debug from "lib/debug"
+
 /**
  * @typedef {Object} Options
  * @prop {string} content
@@ -31,13 +33,16 @@ export default class InjectBrowserSyncPlugin {
    * @param {import("webpack").Compiler} compiler
    */
   apply(compiler) {
+    debug("Options: %o", this.options)
     compiler.hooks.compilation.tap(process.env.REPLACE_PKG_NAME, compilation => {
       HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(process.env.REPLACE_PKG_NAME, (data, cb) => {
+        debug("Before: %s", data.html)
         if (this.options.position === "end") {
           data.html = insertStringBefore(data.html, "</body>", this.options.content)
         } else {
           data.html = insertStringAfter(data.html, "<body>", this.options.content)
         }
+        debug(" After: %s", data.html)
         cb(null, data)
       })
     })
