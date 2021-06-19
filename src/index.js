@@ -17,17 +17,17 @@ import debug from "lib/debug"
  */
 export default class InjectBrowserSyncPlugin {
 
-  /**
-   * @constructor
-   * @param {Options} [options] Plugin options
-   */
-  constructor(options) {
-    this.options = {
-      content: "<div id=\"root\"></div>",
-      position: "start",
-      ...options,
-    }
-  }
+  // /**
+  //  * @constructor
+  //  * @param {Options} [options] Plugin options
+  //  */
+  // constructor(options) {
+  //   this.options = {
+  //     content: "<div id=\"root\"></div>",
+  //     position: "start",
+  //     ...options,
+  //   }
+  // }
 
   /**
    * @param {import("webpack").Compiler} compiler
@@ -35,7 +35,9 @@ export default class InjectBrowserSyncPlugin {
   apply(compiler) {
     debug("Options: %o", this.options)
     compiler.hooks.compilation.tap(process.env.REPLACE_PKG_NAME, compilation => {
-      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(process.env.REPLACE_PKG_NAME, (data, cb) => {
+      debug("tap: compilation")
+      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(process.env.REPLACE_PKG_NAME, (data, callback) => {
+        debug("tapAsync: html-webpack-plugin beforeEmit")
         debug("Before: %s", data.html)
         if (this.options.position === "end") {
           data.html = insertStringBefore(data.html, "</body>", this.options.content)
@@ -43,8 +45,9 @@ export default class InjectBrowserSyncPlugin {
           data.html = insertStringAfter(data.html, "<body>", this.options.content)
         }
         debug(" After: %s", data.html)
-        cb(null, data)
+        callback(null, data)
       })
     })
   }
+
 }
