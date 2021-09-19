@@ -56,5 +56,6 @@
     "plugin",
     "webpack",
     "webpack-plugin"
-  ]
+  ],
+  "type": "module"
 }
