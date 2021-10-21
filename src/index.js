@@ -25,6 +25,8 @@ export default class InjectBodyPlugin {
     this.options = {
       content: "<div id=root/>",
       position: "start",
+      startTag: '<body>',
+      endTag: '</body>,
       ...options,
     }
   }
@@ -40,9 +42,9 @@ export default class InjectBodyPlugin {
         debug("tap: html-webpack-plugin beforeEmit")
         debug("Before: %s", data.html)
         if (this.options.position === "end") {
-          data.html = insertStringBefore(data.html, "</body>", this.options.content)
+          data.html = insertStringBefore(data.html, this.options.endTag, this.options.content)
         } else {
-          data.html = insertStringAfter(data.html, "<body>", this.options.content)
+          data.html = insertStringAfter(data.html, this.options.startTag, this.options.content)
         }
         debug("After: %s", data.html)
       })
