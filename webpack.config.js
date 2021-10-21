@@ -1,5 +1,5 @@
-import configure from "webpack-config-jaid"
+import configure from 'webpack-config-jaid'
 
-export default configure({
+export default configure.default({
   documentation: {babel: true},
 })
