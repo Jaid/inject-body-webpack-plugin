@@ -23,10 +23,10 @@ export default class InjectBodyPlugin {
    */
   constructor(options) {
     this.options = {
-      content: "<div id=root/>",
-      position: "start",
+      content: '<div id=root/>',
+      position: 'start',
       startTag: '<body>',
-      endTag: '</body>,
+      endTag: '</body>',
       ...options,
     }
   }
