@@ -84,6 +84,20 @@ index.html
 <td>start</td>
 <td>If “start”, the content will be injected as close to the body opening tag as possible. If “end”, the content will be injected as close to the body ending tag as possible.</td>
 </tr>
+  </tr>
+<tr>
+<td>startTag</td>
+<td>string</td>
+<td><body></td>
+<td>Defines how the opening tag does look like that the content will be inserted after.</td>
+</tr>
+</tr>
+<tr>
+<td>endTag</td>
+<td>string</td>
+<td></body></td>
+<td>Defines how the closing tag does look like that the content will be inserted before.</td>
+</tr>
 </table>
 
 
