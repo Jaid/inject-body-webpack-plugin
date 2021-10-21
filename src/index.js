@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 import insertStringAfter from "insert-string-after"
 import insertStringBefore from "insert-string-before"
 
-import debug from "lib/debug"
+import debug from "./lib/debug.js"
 
 /**
  * @typedef {Object} Options
